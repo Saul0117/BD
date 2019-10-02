@@ -27,7 +27,7 @@
             </WrapPanel>
             <WrapPanel>
                 <TextBlock Text="Nombre : "/>
-                <TextBlock Name="txtNombre" Width="250" Height="30"/>
+                <TextBlock Name="txtNombre"/>
             </WrapPanel>
             <WrapPanel>
                 <TextBlock Text="Genero : "/>
