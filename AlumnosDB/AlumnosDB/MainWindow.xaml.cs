@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.OleDb;
+using System.Data;
 
 namespace AlumnosDB
 {
@@ -19,10 +21,14 @@ namespace AlumnosDB
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
+    { 
+        OleDbConnection con;//Agregamos la conexion
+        DataTable dt;//Agregar la tabla
         public MainWindow()
         {
             InitializeComponent();
+            con = new OleDbConnection();
+            con.ConnectionString = "Provider=Microsoft.Jet.Oledb.4.0; Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "\\AlumnosDB.mdb";
         }
 
         private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
